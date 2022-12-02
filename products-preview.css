@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box; }
+
+*, :before, :after {
+  margin: 0; }
+
+html, body {
+  width: 100vw;
+  height: 100vh; }
+  html section:not(p), body section:not(p) {
+    font: 500 16px "Montserrat", sans-serif; }
+  @media only screen and (min-width: 1440px) {
+    html section:not(p), body section:not(p) {
+      font: 700 20px "Montserrat", sans-serif; } }
+
+#container {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: auto;
+  background-color: #f2ebe3; }
+  @media only screen and (min-width: 1440px) {
+    #container section {
+      width: fit-content;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start; }
+      #container section .button:hover {
+        background-color: #6c7289;
+        color: white; } }
+
+h1 {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin: 12px 0; }
+
+.heading-3 {
+  margin: 12px 0;
+  font: 700 13px "Fraunces", serif; }
+  @media only screen and (min-width: 600px) and (max-width: 1440px) {
+    .heading-3 {
+      font: 700 16px "Fraunces", serif; } }
+  @media only screen and (min-width: 1440px) {
+    .heading-3 {
+      font: 700 20px "Fraunces", serif; } }
+
+section {
+  width: 375px;
+  margin: 100px auto;
+  background-color: white;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  border-radius: 20px; }
+  section *:not[button] {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start; }
+  section img {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px; }
+  section #inner-container {
+    padding: 5px 25px; }
+    section #inner-container p {
+      font-size: 14px;
+      max-width: 365px;
+      font-weight: normal; }
+    section #inner-container .button {
+      background-color: #3c8067;
+      margin: 10px auto;
+      padding: 10px;
+      width: 330px;
+      border-radius: 10px;
+      color: white; }
+      section #inner-container .button:focus {
+        background-color: #f2ebe3;
+        color: #1c232b; }
+    section #inner-container #prices {
+      margin: 12px 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start; }
+    section #inner-container #new-price {
+      margin-right: 20px;
+      color: #3c8067; }
+    section #inner-container #old-price {
+      text-decoration: line-through; }
+    section #inner-container #new-price {
+      font: 700 13px "Fraunces", serif; }
+    @media only screen and (min-width: 600px) and (max-width: 1440px) {
+      section #inner-container #new-price {
+        font: 700 16px "Fraunces", serif; } }
+    @media only screen and (min-width: 1440px) {
+      section #inner-container #new-price {
+        font: 700 20px "Fraunces", serif; } }
+
+/*# sourceMappingURL=products-preview.css.map */
