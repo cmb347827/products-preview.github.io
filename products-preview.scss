@@ -1,0 +1,122 @@
+
+@import 'variables';
+@import 'mixins';
+
+*{
+  box-sizing: border-box;
+}
+*,:before,:after{
+  margin:0;
+}
+html,body{
+    width: 100vw;
+    height: 100vh;
+    section:not(p) {
+        font: 500 $font-size-med 'Montserrat', sans-serif;
+	}
+    @media only screen and (min-width: $breakpoint-desktop) {
+        section:not(p) {
+            font: 700 $font-size-lrg 'Montserrat', sans-serif;
+		}
+    }
+}
+
+#container{
+    width: 100%;
+	height: 100%;
+    display:inline-block;
+    overflow: auto;
+    @include bg-color($cream);
+	
+	section{
+	    @media only screen and (min-width: $breakpoint-desktop) {
+		   width: fit-content;
+	       @include flex-left-row;
+		    .button{
+		        &:hover{
+			       @include bg-color($dark-grey-blue);
+				   @include font-color($white);
+			    }
+		    }
+		}
+	}
+}
+
+h1{
+	text-transform: uppercase;
+	font-size: 10px;
+    margin: 12px 0;
+}
+
+.heading-3{
+	margin: 12px 0;
+    font: 700 $font-size-sm 'Fraunces', serif;
+	@media only screen and (min-width: $breakpoint-large-phone) and (max-width: $breakpoint-desktop){
+		font: 700 $font-size-med 'Fraunces', serif;
+	}
+	@media only screen and (min-width: $breakpoint-desktop){
+		font: 700 $font-size-lrg 'Fraunces', serif;
+	}	
+}
+
+section{
+    width: 375px;
+	margin: 100px auto;
+	@include bg-color($white);
+	@include flex-left-column;
+    @include border-radius($large-border-radius);
+	
+	*:not[button]{
+	  @include flex-left-column;
+	}
+	img{
+	   @include border-top-radius($large-border-radius);
+	}
+    #inner-container{
+	    padding: 5px 25px;
+	    p{
+		   font-size: $font-size-p;
+		   max-width: 365px;
+		   font-weight: normal;
+		}
+	    .button{
+	        @include bg-color($dark-cyan);
+	        margin: 10px auto;
+	        padding: 10px;
+	        width: 330px;
+	        @include border-radius($border-radius);
+	        @include font-color($white);
+	        &:focus{
+	           @include bg-color($cream);
+		       @include font-color($very-dark-blue);
+	        }
+	    }
+	    #prices{
+	        margin: 12px 0;
+	        @include flex-left-row;
+	    }
+	    #new-price{
+	        margin-right: 20px;
+	        @include font-color($dark-cyan);
+	    }
+	    #old-price{
+	        text-decoration: line-through;
+	    }
+	    #new-price{
+	       font: 700 $font-size-sm 'Fraunces', serif;
+	    }
+		@media only screen and (min-width: $breakpoint-large-phone) and (max-width: $breakpoint-desktop) {	
+            #new-price{
+	            font: 700 $font-size-med 'Fraunces', serif;
+	        }
+	    }
+	    @media only screen and (min-width: $breakpoint-desktop){
+		    #new-price{
+	            font: 700 $font-size-lrg 'Fraunces', serif;
+	        }
+	    }
+	}
+
+    
+}
+
